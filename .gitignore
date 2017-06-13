@@ -45,6 +45,7 @@ crashlytics-build.properties
 fabric.properties
 
 .idea/
+
 apps/smarty/
 apps/template_c/
 tmp/
