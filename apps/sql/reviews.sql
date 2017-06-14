@@ -7,3 +7,5 @@ create table reviews(
   point smallint not null,
   comment varchar(255)
 );
+
+insert into reviews(product_id, name, point, comment) values(1, 'hoge', 3, 'fugahogefuga');
