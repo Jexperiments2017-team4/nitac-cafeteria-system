@@ -10,30 +10,30 @@
         </div>
         <div class="row">
             <div class="col-sm-6">
-                <div class="thumbnail">
+                <h1>Aセット</h1>
+                <a class="thumbnail" href="#">
                     <img src="http://placehold.it/400x300">
                     <div class="caption">
-                        <h1>ほげほげ1</h1>
-                        <p>ほげほげほげほげほげほげ</p>
-                        <p>
-                            <a href="#" class="btn btn-primary" role="button">Button</a>
-                            <a href="#" class="btn btn-default" role="button">ぼたん</a>
-                        </p>
+                        <h1>メニュー名</h1>
+                        <p>カロリー</p>
+                        <p>金額</p>
+                        <hr>
+                        <p>販売中</p>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-sm-6">
-                <div class="thumbnail">
+                <h1>Bセット</h1>
+                <a class="thumbnail" href="#">
                     <img src="http://placehold.it/400x300">
                     <div class="caption">
-                        <h1>ほげほげ2</h1>
-                        <p>ほげほげほげほげほげほげ</p>
-                        <p>
-                            <a href="#" class="btn btn-primary" role="button">Button</a>
-                            <a href="#" class="btn btn-default" role="button">ぼたん</a>
-                        </p>
+                        <h1>メニュー名</h1>
+                        <p>カロリー</p>
+                        <p>金額</p>
+                        <hr>
+                        <p>売り切れ</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
