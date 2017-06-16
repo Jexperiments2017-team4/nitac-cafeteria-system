@@ -2,12 +2,9 @@
 {block name=body}
     <div class="container">
         <div class="row">
-            <h1>ほげほげ</h1>
-            <h2>ほげほげ</h2>
-            <h3>ほげほげ</h3>
-            <h4>ほげほげ</h4>
-            <p>ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</p>
-        </div>
+            <a class="btn btn-default" href="#">&lt;前日</a>
+            <a class="btn btn-default" href="#">今日</a>
+            <a class="btn btn-default" href="#">次日&gt;</a>
         <div class="row">
             <div class="col-sm-6">
                 <h1>Aセット</h1>
