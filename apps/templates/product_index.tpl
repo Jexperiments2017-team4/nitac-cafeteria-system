@@ -38,5 +38,30 @@
                 </a>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="list-group">
+                    {for $foo=1 to 10}
+                        <a href="#" class="list-group-item">
+                            <div class="media">
+                                <div class="media-body">
+                                    <table>
+                                        <tr>
+                                            <th>商品名</th>
+                                            <td>\114,514</td>
+                                            <td>カロリー</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <p class="media-right">
+                                    販売中
+                                </p>
+                            </div>
+                        </a>
+                    {/for}
+                </div>
+            </div>
+        </div>
     </div>
 {/block}
