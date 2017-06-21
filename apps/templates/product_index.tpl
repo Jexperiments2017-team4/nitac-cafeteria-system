@@ -2,9 +2,14 @@
 {block name=body}
     <div class="container">
         <div class="row">
-            <a class="btn btn-default" href="#">&lt;前日</a>
-            <a class="btn btn-default" href="#">今日</a>
-            <a class="btn btn-default" href="#">次日&gt;</a>
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li class="previous"><a href="#">前日</a></li>
+                    <li><a href="#">今日</a></li>
+                    <li class="next"><a href="#">明日</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="row">
             <div class="col-sm-6">
                 <h1>Aセット</h1>
