@@ -17,3 +17,7 @@ create table products(
 
 insert into products(name, price, energy, protein, lipid, salt, start_date, end_date, kind, has_sold_out)
   values('Hoge', 500, '700', '20', '10', '5', '2017-06-01', '2017-07-01', '0', false);
+insert into products(name, price, energy, protein, lipid, salt, start_date, end_date, kind, has_sold_out)
+  values('Fuga', 500, '700', '20', '10', '5', '2017-06-01', '2017-07-01', '0', false);
+insert into products(name, price, energy, protein, lipid, salt, start_date, end_date, kind, has_sold_out)
+  values('Piyo', 500, '700', '20', '10', '5', '2017-06-01', '2017-07-01', '0', false);
