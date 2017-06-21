@@ -45,15 +45,15 @@
             </div>
             <div class="col-sm-12">
                 <div class="list-group">
-                    {for $foo=1 to 10}
+                    {foreach from=$products item=product}
                         <a href="{$SCRIPT_NAME}?type=show" class="list-group-item">
                             <div class="media">
                                 <div class="media-body">
                                     <table>
                                         <tr>
-                                            <th>商品名</th>
-                                            <td>\114,514</td>
-                                            <td>カロリー</td>
+                                            <th>{$product.name}</th>
+                                            <td>{$product.price}</td>
+                                            <td>{$product.energy}</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -62,7 +62,7 @@
                                 </p>
                             </div>
                         </a>
-                    {/for}
+                    {/foreach}
                 </div>
             </div>
         </div>

@@ -9,7 +9,6 @@ class BaseController {
 
   public function __construct() {
     $this->view_initialize();
-    new BaseModel();
   }
 
   private function view_initialize() {
