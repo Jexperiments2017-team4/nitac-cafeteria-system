@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <h1>Aセット</h1>
-                <a class="thumbnail" href="#">
+                <a class="thumbnail" href="{$SCRIPT_NAME}?type=show">
                     <img src="http://placehold.it/1600x1200">
                     <div class="caption">
                         <h1>メニュー名</h1>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-sm-6">
                 <h1>Bセット</h1>
-                <a class="thumbnail" href="#">
+                <a class="thumbnail" href="{$SCRIPT_NAME}?type=show">
                     <img src="http://placehold.it/1600x1200">
                     <div class="caption">
                         <h1>メニュー名</h1>
@@ -43,7 +43,7 @@
             <div class="col-sm-12">
                 <div class="list-group">
                     {for $foo=1 to 10}
-                        <a href="#" class="list-group-item">
+                        <a href="{$SCRIPT_NAME}?type=show" class="list-group-item">
                             <div class="media">
                                 <div class="media-body">
                                     <table>
