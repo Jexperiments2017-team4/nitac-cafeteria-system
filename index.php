@@ -6,8 +6,8 @@
 <?php
     define('_ROOT_DIR', __DIR__.'/');
     require_once(_ROOT_DIR.'apps/init.php');
-    $controller = new ProductController();
-    $controller->index();
+    $controller = new RoutingController();
+    $controller->run();
 
     exit;
 ?>

@@ -7,5 +7,5 @@
   <body>
     <h1>{$name}!</h1>
   </body>
-  <a href="{$SCRIPT_NAME}?type=show">商品詳細</a>
+  <a href="{$SCRIPT_NAME}?class=review&type=show">レビュー一覧</a>
 </html>
