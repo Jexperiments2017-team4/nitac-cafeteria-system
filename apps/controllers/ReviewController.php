@@ -11,7 +11,7 @@ class ReviewController extends BaseController {
   public function index() {
     $this->view->assign('title', 'これはレビュー一覧のページ');
     $this->view->assign('name', 'レビュー一覧ページ');
-    $this->file = 'review.tpl';
+    $this->file = 'review_index.tpl';
     $this->view_display();
   }
 }
