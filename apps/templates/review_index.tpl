@@ -4,7 +4,7 @@
     <div class ="row">
         <div class="col col-sm-4">
         <button type="button" class="btn btn-link">すべてのレビューを表示する</button>
-            <h3>レビューを投稿する。</h3>
+            <h3>レビューを投稿する</h3>
 
             <form action="test2.php" method="post">
                 <div>
