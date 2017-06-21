@@ -14,7 +14,7 @@
             <div class="col-sm-6">
                 <h1>Aセット</h1>
                 <a class="thumbnail" href="#">
-                    <img src="http://placehold.it/400x300">
+                    <img src="http://placehold.it/1600x1200">
                     <div class="caption">
                         <h1>メニュー名</h1>
                         <p>カロリー</p>
@@ -27,7 +27,7 @@
             <div class="col-sm-6">
                 <h1>Bセット</h1>
                 <a class="thumbnail" href="#">
-                    <img src="http://placehold.it/400x300">
+                    <img src="http://placehold.it/1600x1200">
                     <div class="caption">
                         <h1>メニュー名</h1>
                         <p>カロリー</p>
