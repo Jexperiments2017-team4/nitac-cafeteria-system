@@ -23,6 +23,8 @@ class BaseController {
     if(isset($_REQUEST['action'])){
       $this->action = $_REQUEST['action'];
     }
+  
+    $this->view->assign('SCRIPT_NAME', _SCRIPT_NAME);
   }
 
   public function view_display() {
