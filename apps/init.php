@@ -1,4 +1,23 @@
 <?php
+
+  // データベース接続ユーザ名
+  define("_DB_USER", "team4");
+
+  // データベース接続パスワード
+  define("_DB_PASS", "asdfghjk");
+
+  // データベースホスト名
+  define("_DB_HOST", "localhost");
+
+  // データベース名
+  define("_DB_NAME", "team4db");
+
+  // データベースの種類
+  define("_DB_TYPE", "postgresql");
+
+  // データベースリソース
+  define("_DSN", "host="._DB_HOST." dbname="._DB_NAME." user="._DB_USER." password="._DB_PASS);
+  
   // apps/
   define("_APPS_DIR", _ROOT_DIR."apps/");
 
