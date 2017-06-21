@@ -40,6 +40,9 @@
         </div>
 
         <div class="row">
+            <div class="col col-sm-12">
+                <h1>常設メニュー</h1>
+            </div>
             <div class="col-sm-12">
                 <div class="list-group">
                     {for $foo=1 to 10}
