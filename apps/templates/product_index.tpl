@@ -16,11 +16,17 @@
                 <a class="thumbnail" href="{$SCRIPT_NAME}?type=show">
                     <img src="http://placehold.it/1600x1200">
                     <div class="caption">
-                        <h1>メニュー名</h1>
-                        <p>カロリー</p>
-                        <p>金額</p>
+                    {foreach from=$a_set item=aset}
+                        <h1>{$aset.name}</h1>
+                        <p>{$aset.energy}</p>
+                        <p>{$aset.price}</p>
                         <hr>
-                        <p>販売中</p>
+                        {if $aset.has_sold_out eq 't'}
+                            <p>売り切れ</p>
+                        {else}
+                            <p>販売中</p>
+                        {/if}
+                    {/foreach}
                     </div>
                 </a>
             </div>
@@ -29,11 +35,19 @@
                 <a class="thumbnail" href="{$SCRIPT_NAME}?type=show">
                     <img src="http://placehold.it/1600x1200">
                     <div class="caption">
-                        <h1>メニュー名</h1>
-                        <p>カロリー</p>
-                        <p>金額</p>
+                    {foreach from=$b_set item=bset}
+                        <h1>{$bset.name}</h1>
+                        <p>{$bset.energy}</p>
+                        <p>{$bset.price}</p>
                         <hr>
-                        <p>売り切れ</p>
+                        <p>
+                        {if $bset.has_sold_out eq 't'}
+                            売り切れ
+                        {else}
+                            販売中
+                        {/if}
+                    {/foreach}
+                        </p>
                     </div>
                 </a>
             </div>
@@ -45,20 +59,24 @@
             </div>
             <div class="col-sm-12">
                 <div class="list-group">
-                    {foreach from=$products item=product}
+                    {foreach from=$permanents item=p}
                         <a href="{$SCRIPT_NAME}?type=show" class="list-group-item">
                             <div class="media">
                                 <div class="media-body">
                                     <table>
                                         <tr>
-                                            <th>{$product.name}</th>
-                                            <td>{$product.price}</td>
-                                            <td>{$product.energy}</td>
+                                            <th>{$p.name}</th>
+                                            <td>{$p.price}</td>
+                                            <td>{$p.energy}</td>
                                         </tr>
                                     </table>
                                 </div>
                                 <p class="media-right">
-                                    販売中
+                                {if $p.has_sold_out eq 't'}
+                                    <p>売り切れ</p>
+                                {else}
+                                    <p>販売中</p>
+                                {/if}
                                 </p>
                             </div>
                         </a>
