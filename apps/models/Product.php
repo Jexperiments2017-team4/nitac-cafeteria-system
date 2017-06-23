@@ -5,9 +5,7 @@ class Product extends BaseModel {
     if(!$result){
       die('クエリ取得に失敗しました。'.pg_last_error());
     }
-    while($rows = pg_fetch_array($result)){
-      $view->append('products', $rows);
-    }
+    return pg_fetch_array($result);
   }
 }
 ?>
