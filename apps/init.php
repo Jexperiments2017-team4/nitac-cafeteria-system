@@ -16,7 +16,7 @@
   define("_DB_TYPE", "postgresql");
 
   // データベースリソース
-  define("_DSN", "host="._DB_HOST." dbname="._DB_NAME." user="._DB_USER." password="._DB_PASS);
+  define("_DSN", _DB_TYPE.":host="._DB_HOST.";dbname="._DB_NAME.";user="._DB_USER.";password="._DB_PASS);
   
   // apps/
   define("_APPS_DIR", _ROOT_DIR."apps/");

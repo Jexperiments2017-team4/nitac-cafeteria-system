@@ -16,7 +16,9 @@ class ProductController extends BaseController {
 
   public function index() {
     $product = new Product();
-    $this->view-append('products', $product->get_data($this->view));
+    //$product_data = $product->get_data();
+
+    //$this->view-append('products', );
     $this->view->assign('title', 'これは商品のページ');
     $this->view->assign('name', '商品一覧ページ');
     $this->file = 'product_index.tpl';
