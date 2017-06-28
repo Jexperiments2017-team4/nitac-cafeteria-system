@@ -31,6 +31,12 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col col-sm-12">
+                <h1>評価</h1>
+                <a href="{$SCRIPT_NAME}?class=review&type=show">すべてのレビューを表示</a>
+                <h1>レビューを投稿する</h1>
+            </div>
+        </div>
     </div>
-    <a href="{$SCRIPT_NAME}?class=review&type=show">レビュー一覧</a>
 {/block}
