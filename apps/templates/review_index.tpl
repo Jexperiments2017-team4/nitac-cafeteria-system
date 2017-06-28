@@ -3,7 +3,14 @@
 <div class="container">
     <div class ="row">
         <div class="col col-sm-4">
-        <button type="button" class="btn btn-link">すべてのレビューを表示する</button>
+            <div class="review">
+                <div class="review-title">
+                    <p class="review-penname">ほげ さんのレビュー</p>
+                    <p class="review-score">3 / 5点</p>
+                </div>
+                <p class="review-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
             <h3>レビューを投稿する</h3>
 
             <form action="test2.php" method="post">
