@@ -19,13 +19,18 @@ class ReviewController extends BaseController
 
     public function index($pid = 1)
     {
-        $this->view->assign('title', 'これはレビュー一覧のページ');
-        $this->view->assign('name', 'レビュー一覧ページ');
         $product_id = $pid;
         if(isset($_REQUEST['product_id'])){
           $product_id = $_REQUEST['product_id'];
         }
         $this->view->assign('product_id', $product_id);
+
+        $review = new Review();
+        $reviews = $review->get_data($product_id);
+        while($rows = pg_fetch_array($reviews)){
+          $this->view->append('reviews', $rows);
+        }
+
         $this->file = 'review_index.tpl';
         $this->view_display();
     }
@@ -38,6 +43,7 @@ class ReviewController extends BaseController
         $comment = $_POST['comment'];
         $review = new Review();
         $review->create($product_id, $name, $point, $comment);
+        // TODO: type:createを変える
         $this->index($product_id);
     }
 }
