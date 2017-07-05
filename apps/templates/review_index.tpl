@@ -2,7 +2,7 @@
 {block name=body}
 <div class="container">
     <div class ="row">
-        <div class="col col-sm-4">
+        <div class="col col-sm-12">
             <div class="review">
                 <div class="review-title">
                     <p class="review-penname">ほげ さんのレビュー</p>
@@ -13,26 +13,26 @@
 
             <h3>レビューを投稿する</h3>
 
-            <form action="test2.php" method="post">
+            <form action="index.php" method="post">
                 <div>
                     <label for="inputName">名前</label>
                     <input type="text" name="name" class="form-control" id="inputName" placeholder="名前">
                 </div>
-                <label for="inlineRadio1">点数</label>
+                <label for="score1">点数</label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="score" id="score1" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="score" id="score2" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="score" id="score3" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+                    <input type="radio" name="score" id="score4" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5
+                    <input type="radio" name="score" id="score5" value="5"> 5
                 </label>
                 <div class="form-group">
                     <label for="inputReview">内容</label>
