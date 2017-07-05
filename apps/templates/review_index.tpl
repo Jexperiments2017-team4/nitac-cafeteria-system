@@ -3,6 +3,7 @@
 <div class="container">
     <div class ="row">
         <div class="col col-sm-12">
+            <h1>レビュー一覧</h1>
             <div class="review">
                 <div class="review-title">
                     <p class="review-penname">ほげ さんのレビュー</p>
@@ -10,8 +11,12 @@
                 </div>
                 <p class="review-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
+        </div>
+    </div>
 
-            <h3>レビューを投稿する</h3>
+    <div class="row">
+        <div class="col col-sm-12">
+            <h1>レビューを投稿する</h1>
 
             <form action="index.php" method="post">
                 <div>
