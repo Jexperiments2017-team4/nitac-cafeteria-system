@@ -50,5 +50,7 @@
   require_once(_MODELS_DIR."BaseModel.php");
   require_once(_MODELS_DIR."Product.php");
   require_once(_MODELS_DIR."Review.php");
+  require_once(_MODELS_DIR."Image.php");
   
+  new ImageModel();
 ?>
