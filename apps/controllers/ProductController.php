@@ -39,9 +39,9 @@ class ProductController extends BaseController {
     $product = new Product();
     $has_sold_out = $_POST['has_sold_out'];
     $id = $_POST['id'];
-    $product->update_sold_out($has_sold_out, $id);
+    $menu = $product->update_sold_out($has_sold_out, $id);
     $this->view->assign('product', pg_fetch_array($menu));
-    $text = $has_sold_out == 't' ? '売り切れ' : '販売中';
+    $text = $has_sold_out == 'true' ? '売り切れ' : '販売中';
     echo json_encode(['text' => $text]);
     /*
     $.ajax({

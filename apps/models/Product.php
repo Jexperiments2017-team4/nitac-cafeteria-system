@@ -26,14 +26,14 @@ class Product extends BaseModel {
     return $result;
   }
 
-  public function update_has_sold_out($has_sold_out, $id){
+  public function update_sold_out($has_sold_out, $id){
     $sql = "UPDATE products SET has_sold_out = $1 WHERE id = $2";
     $result = pg_query_params($sql, array($has_sold_out, $id));
-    if(!result){
+    if(!$result){
       die('更新に失敗。'.pg_last_error());
     }
 
-    return $this->getmenu($id);
+    return $this->get_menu($id);
   }
 }
 ?>
