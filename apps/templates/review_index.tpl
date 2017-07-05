@@ -18,7 +18,7 @@
         <div class="col col-sm-12">
             <h1>レビューを投稿する</h1>
 
-            <form action="index.php" method="post">
+            <form action="{$SCRIPT_NAME}?class=review&type=create&product_id~{$product_id}" method="post">
                 <div>
                     <label for="inputName">名前</label>
                     <input type="text" name="name" class="form-control" id="inputName" placeholder="名前">
@@ -41,7 +41,7 @@
                 </label>
                 <div class="form-group">
                     <label for="inputReview">内容</label>
-                    <textarea class="form-control" id="inputReview" rows="3" placeholder="内容"></textarea>
+                    <textarea class="form-control" name="comment" id="inputReview" rows="3" placeholder="内容"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">投稿する</button>
             </form>
