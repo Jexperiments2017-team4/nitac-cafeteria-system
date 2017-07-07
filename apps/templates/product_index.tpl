@@ -52,31 +52,29 @@
         <div class="row">
             <div class="col col-sm-12">
                 <h1>常設メニュー</h1>
-            </div>
-            <div class="col-sm-12">
-                <div class="list-group">
-                    {foreach from=$permanents item=p}
-                        <a href="{$SCRIPT_NAME}?type=show&id={$p.id}" class="list-group-item">
-                            <div class="media">
-                                <div class="media-body">
-                                    <table>
-                                        <tr>
-                                            <th>{$p.name}</th>
-                                            <td>{$p.price}</td>
-                                            <td>{$p.energy}</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <p class="media-right">
-                                {if $p.has_sold_out eq 't'}
-                                    <p>売り切れ</p>
-                                {else}
-                                    <p>販売中</p>
-                                {/if}
-                                </p>
-                            </div>
-                        </a>
-                    {/foreach}
+                <div class="table table-hover">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th class="text-center">メニュー</th>
+                            <th class="text-center">価格</th>
+                            <th class="text-center">カロリー</th>
+                            <th class="text-center">販売状況</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach from=$permanents item=p}
+                            <tr title="{$p.name}の詳細" onclick="location.href='{$SCRIPT_NAME}?type=show&id={$p.id}'">
+                                <td class="text-center">{$p.name}</td>
+                                <td class="text-right">{$p.price} 円</td>
+                                <td class="text-right">{$p.energy} kcal</td>
+                                <td class="{if $p.has_sold_out eq 't'}warning{else}success{/if} text-center">
+                                    {if $p.has_sold_out eq 't'}売り切れ{else}販売中{/if}
+                                </td>
+                            </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
