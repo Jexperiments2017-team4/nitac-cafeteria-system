@@ -4,9 +4,9 @@
         <div class="row">
             <div class="col col-sm-12">
                 {if $product.has_sold_out eq 't'}
-                    <h1 class="products-selling-status-sold-out">売り切れ</h1>
+                    <h1 class="products-selling-status-sold-out" id="products-selling-status">売り切れ</h1>
                 {else}
-                    <h1 class="products-selling-status-now-on-sale">販売中</h1>
+                    <h1 class="products-selling-status-now-on-sale" id="products-selling-status">販売中</h1>
                 {/if}
                 <h1 class="products-product-name">{$product.name}</h1>
                 <img class="products-product-image" src="http://placehold.it/1600x1200">
@@ -22,12 +22,21 @@
             <div class="col col-sm-6 col-sm-offset-6">
                 <p>\{$product.price}</p>
                 <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-default active">
-                        <input type="radio" autocomplete="off" checked>販売中
-                    </label>
-                    <label class="btn btn-default">
-                        <input type="radio" autocomplete="off">売り切れ
-                    </label>
+                    {if $product.has_sold_out eq 't'}
+                        <label id="now-on-sale-button" class="btn btn-default">
+                            <input type="radio" name="sale-status" value="販売中">販売中
+                        </label>
+                        <label id="sold-out-button" class="btn btn-default active">
+                            <input type="radio" name="sale-status" value="売り切れ" checked>売り切れ
+                        </label>
+                    {else}
+                        <label id="now-on-sale-button" class="btn btn-default active">
+                            <input type="radio" name="sale-status" value="販売中" checked>販売中
+                        </label>
+                        <label id="sold-out-button" class="btn btn-default">
+                            <input type="radio" name="sale-status" value="売り切れ">売り切れ
+                        </label>
+                    {/if}
                 </div>
             </div>
         </div>
