@@ -27,6 +27,7 @@ class ReviewController extends BaseController
 
         $review = new Review();
         $reviews = $review->get_data($product_id);
+        $this->view->assign('review_rows', pg_num_rows($reviews));
         while($rows = pg_fetch_array($reviews)){
           $this->view->append('reviews', $rows);
         }
@@ -43,7 +44,7 @@ class ReviewController extends BaseController
         $comment = $_POST['comment'];
         $review = new Review();
         $review->create($product_id, $name, $point, $comment);
-        // TODO: type:createを変える
+        $this->next_type = 'index';
         $this->index($product_id);
     }
 }

@@ -4,7 +4,9 @@
     <div class ="row">
         <div class="col col-sm-12">
             <h1>レビュー一覧</h1>
-            <!-- TODO: レビューがないときの表示 -->
+            \{if {$review_rows} == 0}
+                <p>レビューがありません。</p>
+            \{/if}
             {foreach from=$reviews item=review}
             <div class="review">
                 <div class="review-title">
