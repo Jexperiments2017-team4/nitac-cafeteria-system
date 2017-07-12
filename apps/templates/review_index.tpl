@@ -4,9 +4,9 @@
     <div class ="row">
         <div class="col col-sm-12">
             <h1>レビュー一覧</h1>
-            \{if {$review_rows} == 0}
+            {if {$review_rows} == 0}
                 <p>レビューがありません。</p>
-            \{/if}
+            {/if}
             {foreach from=$reviews item=review}
             <div class="review">
                 <div class="review-title">
@@ -23,7 +23,7 @@
         <div class="col col-sm-12">
             <h1>レビューを投稿する</h1>
 
-            <form action="{$SCRIPT_NAME}?class=review&type=create&product_id~{$product_id}" method="post">
+            <form action="{$SCRIPT_NAME}?class=review&type=create&product_id={$product_id}" method="post">
                 <div>
                     <label for="inputName">名前</label>
                     <input type="text" name="name" class="form-control" id="inputName" placeholder="名前">
