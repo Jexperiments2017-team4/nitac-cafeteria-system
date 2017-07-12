@@ -2,6 +2,13 @@
 {block name=body}
     <div class="container">
         <div class="row">
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li class="previous"><a href="{$SCRIPT_NAME}">戻る</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
             <div class="col col-sm-12">
                 {if $product.has_sold_out eq 't'}
                     <h1 class="products-selling-status-sold-out" id="products-selling-status">売り切れ</h1>
