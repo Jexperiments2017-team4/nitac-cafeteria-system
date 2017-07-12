@@ -12,7 +12,7 @@ class Product extends BaseModel {
     if($date == null){
       $date = date("Ymd");
     }
-    $sql = "SELECT * FROM products WHERE kind = '$kind' AND start_date <= '$date' AND end_date >= '$date'";
+    $sql = "SELECT * FROM products WHERE kind = '$kind' AND start_date <= '$date' AND (end_date >= '$date' OR end_date IS NULL)";
     $result = pg_query($sql);
     if(!$result){
       die('クエリ取得に失敗しました。'.pg_last_error());
