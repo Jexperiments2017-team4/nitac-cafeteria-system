@@ -26,7 +26,7 @@
             $(function() {
                 // 販売ステータス変更処理
                 // 販売ステータスラジオボタンの変更で発火
-                $('input[type="radio"] [name="sale-status"]').change(function() {
+                $('input[name="sale-status"]').change(function() {
                     var has_sold_out = ($(this).val() == new String("売り切れ")); // confirmの結果によらず、ボタンが押された時点でhas_sold_outは変更されている
                     if (confirm("売り切れ情報を変更しますか?")) {
                         $.ajax(
