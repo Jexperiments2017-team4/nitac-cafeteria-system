@@ -31,6 +31,14 @@ class ProductController extends BaseController {
 
     $this->view->assign('title', 'これは商品詳細のページ');
     $this->view->assign('name', '商品詳細ページ');
+
+    $review = new Review();
+    $reviews = $review->get_data($_REQUEST['id']);
+    $this->view->assign('review_rows', pg_num_rows($reviews));
+    while($rows = pg_fetch_array($reviews)){
+        $this->view->append('reviews', $rows);
+    }
+
     $this->file = 'product_show.tpl';
     $this->view_display();
   }

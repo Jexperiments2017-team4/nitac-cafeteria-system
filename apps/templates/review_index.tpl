@@ -6,7 +6,7 @@
             <h1>レビュー一覧</h1>
             {if {$review_rows} == 0}
                 <p>レビューがありません。</p>
-            {/if}
+            {else}
             {foreach from=$reviews item=review}
             <div class="review">
                 <div class="review-title">
@@ -16,6 +16,7 @@
                 <p class="review-body">{$review.comment}</p>
             </div>
             {/foreach}
+            {/if}
         </div>
     </div>
 
