@@ -3,6 +3,11 @@
 <div class="container">
     <div class ="row">
         <div class="col col-sm-12">
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li class="previous"><a href="{$SCRIPT_NAME}?type=show&id={$product_id}">戻る</a></li>
+                </ul>
+            </nav>
             <h1>レビュー一覧</h1>
             {if {$review_rows} == 0}
                 <p>レビューがありません。</p>
