@@ -18,7 +18,8 @@ class ProductController extends BaseController {
   }
 
   public function index() {
-    $this->fetch_menus();
+    $this->view->assign('today', date("Ymd"));
+    $this->fetch_menus(date("Ymd"));
     $this->view->assign('title', 'これは商品のページ');
     $this->view->assign('name', '商品一覧ページ');
     $this->file = 'product_index.tpl';
@@ -36,7 +37,7 @@ class ProductController extends BaseController {
     $reviews = $review->get_data($_REQUEST['id']);
     $this->view->assign('review_rows', pg_num_rows($reviews));
     while($rows = pg_fetch_array($reviews)){
-        $this->view->append('reviews', $rows);
+      $this->view->append('reviews', $rows);
     }
 
     $this->file = 'product_show.tpl';
@@ -69,21 +70,21 @@ class ProductController extends BaseController {
     */
   }
 
-  private function fetch_menus() {
+  private function fetch_menus($dateString) {
     $product = new Product();
 
     // 常設メニューをとる
-    $permanents = $product->get_data_by_query(0);
+    $permanents = $product->get_data_by_query(0, $dateString);
     while($rows = pg_fetch_array($permanents)){
       $this->view->append('permanents', $rows);
     }
 
     // Aセットをとる
-    $a_set = $product->get_data_by_query(1);
+    $a_set = $product->get_data_by_query(1, $dateString);
     $this->view->assign('a_set', pg_fetch_array($a_set));
 
     // Bセットをとる
-    $b_set = $product->get_data_by_query(2);
+    $b_set = $product->get_data_by_query(2, $dateString);
     $this->view->assign('b_set', pg_fetch_array($b_set));
   }
 }
