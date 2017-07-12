@@ -52,7 +52,7 @@
                         <p class="review-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 {/for}
-                <a href="{$SCRIPT_NAME}?class=review&type=show">すべてのレビューを表示</a>
+                <a href="{$SCRIPT_NAME}?class=review&type=show&product_id={$product.id}">すべてのレビューを表示</a>
                 <h1>レビューを投稿する</h1>
                 <form action="index.php" method="post">
                     <div>
