@@ -4,9 +4,9 @@
         <div class="row">
             <nav aria-label="...">
                 <ul class="pager">
-                    <li class="previous"><a href="#">前日</a></li>
-                    <li><a href="#">今日</a></li>
-                    <li class="next"><a href="#">明日</a></li>
+                    <li class="previous"><a href="{$SCRIPT_NAME}?date={$previous_date}">前日</a></li>
+                    <li><a href="{$SCRIPT_NAME}?date={$today}">今日</a></li>
+                    <li class="next"><a href="{$SCRIPT_NAME}?date={$next_date}">明日</a></li>
                 </ul>
             </nav>
         </div>

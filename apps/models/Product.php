@@ -8,8 +8,8 @@ class Product extends BaseModel {
     return $result;
   }
 
-  public function get_data_by_query($kind){
-    $sql = "SELECT * FROM products WHERE kind = '$kind'";
+  public function get_data_by_query($kind, $date = null){
+    $sql = "SELECT * FROM products WHERE kind = '$kind' AND start_date <= '$date' AND (end_date >= '$date' OR end_date IS NULL)";
     $result = pg_query($sql);
     if(!$result){
       die('クエリ取得に失敗しました。'.pg_last_error());
