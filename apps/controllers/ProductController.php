@@ -36,8 +36,29 @@ class ProductController extends BaseController {
   }
 
   public function update_sold_out(){
-    // $product = new Product();
-    // $product->update_sold_out(t, 1);
+    $product = new Product();
+    $has_sold_out = $_POST['has_sold_out'];
+    $id = $_POST['id'];
+    $menu = $product->update_sold_out($has_sold_out, $id);
+    $this->view->assign('product', pg_fetch_array($menu));
+    $text = $has_sold_out == 'true' ? '売り切れ' : '販売中';
+    echo json_encode(['text' => $text]);
+    /*
+    $.ajax({
+      type: 'POST',
+      url: "{$SCRIPT_NAME}?type=uso",
+      data {
+        has_sold_out: true,
+        id: '{$product.id}'
+      }
+      .done(function(data, status, jqXHR){
+
+      })
+      .fail(function(jqXHR, status, error){
+
+      })
+    });
+    */
   }
 
   private function fetch_menus() {
