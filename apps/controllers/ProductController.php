@@ -18,10 +18,12 @@ class ProductController extends BaseController {
   }
 
   public function index() {
-    $this->view->assign('today', date("Ymd"));
-    $this->fetch_menus(date("Ymd"));
+    $specified_date = isset($_REQUEST['date']) ? $_REQUEST['date'] : null;
+    $this->fetch_menus($specified_date);
     $this->view->assign('title', 'これは商品のページ');
     $this->view->assign('name', '商品一覧ページ');
+    $this->view->assign('today', date("Ymd"));
+    $this->view->assign('specified_date', $specified_date);
     $this->file = 'product_index.tpl';
     $this->view_display();
   }
@@ -70,21 +72,21 @@ class ProductController extends BaseController {
     */
   }
 
-  private function fetch_menus($dateString) {
+  private function fetch_menus($date_string) {
     $product = new Product();
 
     // 常設メニューをとる
-    $permanents = $product->get_data_by_query(0, $dateString);
+    $permanents = $product->get_data_by_query(0, $date_string);
     while($rows = pg_fetch_array($permanents)){
       $this->view->append('permanents', $rows);
     }
 
     // Aセットをとる
-    $a_set = $product->get_data_by_query(1, $dateString);
+    $a_set = $product->get_data_by_query(1, $date_string);
     $this->view->assign('a_set', pg_fetch_array($a_set));
 
     // Bセットをとる
-    $b_set = $product->get_data_by_query(2, $dateString);
+    $b_set = $product->get_data_by_query(2, $date_string);
     $this->view->assign('b_set', pg_fetch_array($b_set));
   }
 }
