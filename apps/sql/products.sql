@@ -20,7 +20,7 @@ insert into products(name, price, energy, protein, lipid, salt, start_date, end_
 insert into products(name, price, energy, protein, lipid, salt, start_date, end_date, kind, has_sold_out)
   values('カツカレー', 370, '832', '19.3', '23.6', '3.6', '2017-06-01', '2017-08-01', 0, false);
 insert into products(name, price, energy, protein, lipid, salt, start_date, end_date, kind, has_sold_out)
-  values('とんこつラーメン', 210, '481', '20.6', '8.2', '8.1', '2017-07-24', '2017-07-028', 0, false);
+  values('とんこつラーメン', 210, '481', '20.6', '8.2', '8.1', '2017-07-24', '2017-07-28', 0, false);
 insert into products(name, price, energy, protein, lipid, salt, start_date, end_date, kind, has_sold_out)
   values('冷やしカレーうどん', 300, '422', '11.3', '6.4', '5.6', '2017-07-03', '2017-07-31', 0, false);
 insert into products(name, price, energy, protein, lipid, salt, start_date, end_date, kind, has_sold_out)
