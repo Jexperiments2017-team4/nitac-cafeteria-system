@@ -9,9 +9,6 @@ class Product extends BaseModel {
   }
 
   public function get_data_by_query($kind, $date = null){
-    if($date == null){
-      $date = date("Ymd");
-    }
     $sql = "SELECT * FROM products WHERE kind = '$kind' AND start_date <= '$date' AND (end_date >= '$date' OR end_date IS NULL)";
     $result = pg_query($sql);
     if(!$result){
