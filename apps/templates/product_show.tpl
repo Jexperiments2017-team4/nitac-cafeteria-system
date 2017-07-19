@@ -11,12 +11,12 @@
         <div class="row">
             <div class="col col-sm-12">
                 {if $product.has_sold_out eq 't'}
-                    <h1 class="products-selling-status-sold-out" id="products-selling-status">売り切れ</h1>
+                    <h1 class="text-warning" id="products-selling-status">売り切れ</h1>
                 {else}
-                    <h1 class="products-selling-status-now-on-sale" id="products-selling-status">販売中</h1>
+                    <h1 class="text-success" id="products-selling-status">販売中</h1>
                 {/if}
                 <h1 class="products-product-name">{$product.name}</h1>
-                <img class="products-product-image" src="{$IMAGES_PATH}{$product.name}.jpg">
+                <img class="img-responsive" src="{$IMAGES_PATH}{$product.name}.jpg">
             </div>
             <div class="col col-sm-6">
                 <p class="products-product-energy">エネルギー: {$product.energy} kcal</p>
@@ -27,7 +27,7 @@
                 <p class="products-product-salt">塩分: {$product.salt} g</p>
             </div>
             <div class="col col-sm-6 col-sm-offset-6">
-                <p>\{$product.price}</p>
+                <p>{$product.price} 円</p>
                 <div class="btn-group" data-toggle="buttons">
                     {if $product.has_sold_out eq 't'}
                         <label id="now-on-sale-button" class="btn btn-default">

@@ -42,7 +42,7 @@
                             var hoge = JSON.parse(data);
                             $('#products-selling-status')
                                 .text((JSON.parse(data))['text'])
-                                .attr("class", has_sold_out ? "products-selling-status-sold-out" : "products-selling-status-now-on-sale");
+                                .attr("class", has_sold_out ? "text-warning" : "text-success");
                         }).fail(function (jqXHR, status, error) {
                         })
                     } else {
