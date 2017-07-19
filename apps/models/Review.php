@@ -16,5 +16,14 @@ class Review extends BaseModel {
     }
     return $result;
   }
+
+  public function get_avg_point($product_id){
+    $sql = "SELECT AVG(point) FROM reviews WHERE product_id = '$product_id'";
+    $result = pg_query($sql);
+    if(!$result){
+      die('クエリ取得に失敗しました。'.pg_last_error());
+    }
+    return $result;
+  }
 }
 ?>

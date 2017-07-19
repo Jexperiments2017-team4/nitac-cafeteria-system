@@ -32,6 +32,11 @@ class ReviewController extends BaseController
           $this->view->append('reviews', $rows);
         }
 
+        $avg_point = $review->get_avg_point($product_id);
+        $avg_point = pg_fetch_result($avg_point, 0);
+        $avg_point = round($avg_point, 1, PHP_ROUND_HALF_DOWN);
+        $this->view->assign('avg_point', $avg_point);
+
         $this->file = 'review_index.tpl';
         $this->view_display();
     }

@@ -12,6 +12,7 @@
             {if {$review_rows} == 0}
                 <p>レビューがありません。</p>
             {else}
+            <p>総合評価: {$avg_point}</p>
             {foreach from=$reviews item=review}
             <div class="review">
                 <div class="review-title">
