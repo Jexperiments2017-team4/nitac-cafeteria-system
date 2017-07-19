@@ -27,13 +27,13 @@
                     <img src="{$IMAGES_PATH}{$a_set.name}.jpg">
                     <div class="caption">
                         <h1>{$a_set.name}</h1>
-                        <p>{$a_set.energy}</p>
-                        <p>{$a_set.price}</p>
+                        <p>{$a_set.price} 円</p>
+                        <p>{$a_set.energy} kcal</p>
                         <hr>
                         {if $a_set.has_sold_out eq 't'}
-                            <p>売り切れ</p>
+                            <p class="text-warning">売り切れ</p>
                         {else}
-                            <p>販売中</p>
+                            <p class="text-success">販売中</p>
                         {/if}
                     </div>
                 </a>
@@ -44,16 +44,14 @@
                     <img src="{$IMAGES_PATH}{$b_set.name}.jpg">
                     <div class="caption">
                         <h1>{$b_set.name}</h1>
-                        <p>{$b_set.energy}</p>
-                        <p>{$b_set.price}</p>
+                        <p>{$b_set.price} 円</p>
+                        <p>{$b_set.energy} kcal</p>
                         <hr>
-                        <p>
                         {if $b_set.has_sold_out eq 't'}
-                            売り切れ
+                            <p class="text-warning">売り切れ</p>
                         {else}
-                            販売中
+                            <p class="text-success">販売中</p>
                         {/if}
-                        </p>
                     </div>
                 </a>
             </div>
