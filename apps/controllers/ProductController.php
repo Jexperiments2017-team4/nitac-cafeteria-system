@@ -19,6 +19,7 @@ class ProductController extends BaseController {
 
   public function index() {
     $specified_date = isset($_REQUEST['date']) ? $_REQUEST['date'] : date("Ymd");
+    $print_specified_date = date("n月j日", strtotime($specified_date));
     $next_date = date("Ymd", strtotime($specified_date) + 24 * 60 * 60);
     $previous_date = date("Ymd", strtotime($specified_date) - 24 * 60 * 60);
     $this->fetch_menus($specified_date);
@@ -26,6 +27,7 @@ class ProductController extends BaseController {
     $this->view->assign('name', '商品一覧ページ');
     $this->view->assign('today', date("Ymd"));
     $this->view->assign('specified_date', $specified_date);
+    $this->view->assign('print_specified_date', $print_specified_date);
     $this->view->assign('next_date', $next_date);
     $this->view->assign('previous_date', $previous_date);
     $this->file = 'product_index.tpl';

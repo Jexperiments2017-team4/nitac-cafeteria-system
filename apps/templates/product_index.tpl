@@ -11,6 +11,11 @@
             </nav>
         </div>
         <div class="row">
+            <div class="col-sm-12">
+                <h1>{$print_specified_date}のメニュー</h1>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-6">
                 <h1>Aセット</h1>
                 <a class="thumbnail" href="{$SCRIPT_NAME}?type=show&id={$a_set.id}">
