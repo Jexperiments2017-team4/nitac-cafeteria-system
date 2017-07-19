@@ -39,6 +39,10 @@ class ProductController extends BaseController {
     $product = new Product();
     $this->view->assign('product', pg_fetch_array($product->get_menu($_REQUEST['id'])));
 
+    $specified_date = isset($_REQUEST['date']) ? $_REQUEST['date'] : date("Ymd");
+    $this->view->assign('specified_date', $specified_date);
+    $this->view->assign('today', date("Ymd"));
+
     $this->view->assign('title', 'これは商品詳細のページ');
     $this->view->assign('name', '商品詳細ページ');
 

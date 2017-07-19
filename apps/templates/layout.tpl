@@ -61,6 +61,11 @@
         </script>
     </head>
     <body>
+        <div class="container">
+            <nav class="navbar navbar-inverse bg-primary">
+                <a class="navbar-brand" href="{$SCRIPT_NAME}">明石高専学生食堂</a>
+            </nav>
+        </div>
         {block name=body}{/block}
     </body>
 </html>
