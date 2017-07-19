@@ -57,6 +57,7 @@
                 {if {$review_rows} == 0}
                     <p>レビューがありません。</p>
                 {else}
+                    <p>総合評価: {$avg_point}</p>
                     {foreach from=$reviews item=review name=reviewsloop}
                         {if $smarty.foreach.reviewsloop.index < 3}
                             <div class="review">
