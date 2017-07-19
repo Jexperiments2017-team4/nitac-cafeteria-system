@@ -4,16 +4,18 @@
         <div class="row">
             <nav aria-label="...">
                 <ul class="pager">
-                    <li class="previous"><a href="{$SCRIPT_NAME}">戻る</a></li>
+                    <li class="previous"><a href="{$SCRIPT_NAME}?date={$specified_date}">戻る</a></li>
                 </ul>
             </nav>
         </div>
         <div class="row">
             <div class="col col-sm-12">
-                {if $product.has_sold_out eq 't'}
-                    <h1 class="text-warning" id="products-selling-status">売り切れ</h1>
-                {else}
-                    <h1 class="text-success" id="products-selling-status">販売中</h1>
+                {if $specified_date eq $today}
+                    {if $product.has_sold_out eq 't'}
+                        <h1 class="text-warning" id="products-selling-status">売り切れ</h1>
+                    {else}
+                        <h1 class="text-success" id="products-selling-status">販売中</h1>
+                    {/if}
                 {/if}
                 <h1 class="products-product-name">{$product.name}</h1>
                 <img class="img-responsive" src="{$IMAGES_PATH}{$product.name}.jpg">
@@ -28,23 +30,25 @@
             </div>
             <div class="col col-sm-6 col-sm-offset-6">
                 <p>{$product.price} 円</p>
-                <div class="btn-group" data-toggle="buttons">
-                    {if $product.has_sold_out eq 't'}
-                        <label id="now-on-sale-button" class="btn btn-default">
-                            <input type="radio" name="sale-status" value="販売中">販売中
-                        </label>
-                        <label id="sold-out-button" class="btn btn-default active">
-                            <input type="radio" name="sale-status" value="売り切れ" checked>売り切れ
-                        </label>
-                    {else}
-                        <label id="now-on-sale-button" class="btn btn-default active">
-                            <input type="radio" name="sale-status" value="販売中" checked>販売中
-                        </label>
-                        <label id="sold-out-button" class="btn btn-default">
-                            <input type="radio" name="sale-status" value="売り切れ">売り切れ
-                        </label>
-                    {/if}
-                </div>
+                {if $specified_date eq $today}
+                    <div class="btn-group" data-toggle="buttons">
+                        {if $product.has_sold_out eq 't'}
+                            <label id="now-on-sale-button" class="btn btn-default">
+                                <input type="radio" name="sale-status" value="販売中">販売中
+                            </label>
+                            <label id="sold-out-button" class="btn btn-default active">
+                                <input type="radio" name="sale-status" value="売り切れ" checked>売り切れ
+                            </label>
+                        {else}
+                            <label id="now-on-sale-button" class="btn btn-default active">
+                                <input type="radio" name="sale-status" value="販売中" checked>販売中
+                            </label>
+                            <label id="sold-out-button" class="btn btn-default">
+                                <input type="radio" name="sale-status" value="売り切れ">売り切れ
+                            </label>
+                        {/if}
+                    </div>
+                {/if}
             </div>
         </div>
         <div class="row">
