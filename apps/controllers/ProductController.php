@@ -2,6 +2,7 @@
 class ProductController extends BaseController {
   public function __construct() {
     parent::__construct();
+    $this->view->assign("IMAGES_PATH", _IMAGES_DIR);
   }
 
   public function run() {

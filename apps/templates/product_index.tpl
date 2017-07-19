@@ -19,7 +19,7 @@
             <div class="col-sm-6">
                 <h1>Aセット</h1>
                 <a class="thumbnail" href="{$SCRIPT_NAME}?type=show&id={$a_set.id}">
-                    <img src="http://placehold.it/1600x1200">
+                    <img src="{$IMAGES_PATH}{$a_set.name}.jpg">
                     <div class="caption">
                         <h1>{$a_set.name}</h1>
                         <p>{$a_set.energy}</p>
@@ -36,7 +36,7 @@
             <div class="col-sm-6">
                 <h1>Bセット</h1>
                 <a class="thumbnail" href="{$SCRIPT_NAME}?type=show&id={$b_set.id}">
-                    <img src="http://placehold.it/1600x1200">
+                    <img src="{$IMAGES_PATH}{$b_set.name}.jpg">
                     <div class="caption">
                         <h1>{$b_set.name}</h1>
                         <p>{$b_set.energy}</p>
