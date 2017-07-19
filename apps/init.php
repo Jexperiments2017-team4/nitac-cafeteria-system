@@ -36,6 +36,9 @@
   // apps/templates_c
   define("_TEMPLATES_C_DIR", _APPS_DIR."templates_c/");
 
+  // apps/images
+  define("_IMAGES_DIR", "./apps/images/");
+
   define( "_SCRIPT_NAME", $_SERVER['SCRIPT_NAME']);
 
   require_once(_SMARTY_DIR."Smarty.class.php");
