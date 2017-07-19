@@ -12,7 +12,12 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <h1>{$print_specified_date}のメニュー</h1>
+                <h1>明石高専学生食堂</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>{$print_specified_date}のメニュー</h2>
             </div>
         </div>
         <div class="row">
