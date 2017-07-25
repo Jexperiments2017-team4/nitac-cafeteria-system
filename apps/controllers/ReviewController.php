@@ -49,10 +49,14 @@ class ReviewController extends BaseController
         $comment = $_POST['comment'];
         $review = new Review();
         $review->create($product_id, $name, $point, $comment);
-        $url = "{$SCRIPT_NAME}?class=review&type=index&product_id={$product_id}";
+        $url = "";
+        if($this->action == 'product'){
+            $url = "{$SCRIPT_NAME}?class=product&type=show&id={$product_id}";
+        }
+        else{
+            $url = "{$SCRIPT_NAME}?class=review&type=index&product_id={$product_id}";
+        }
         header("Location: {$url}");
-        // $this->next_type = 'index';
-        // $this->index($product_id);
     }
 }
 ?>

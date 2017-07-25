@@ -72,7 +72,7 @@
                 {/if}
                 <a href="{$SCRIPT_NAME}?class=review&type=show&product_id={$product.id}">すべてのレビューを表示</a>
                 <h1>レビューを投稿する</h1>
-                <form action="{$SCRIPT_NAME}?class=review&type=create&product_id={$product.id}" method="post">
+                <form action="{$SCRIPT_NAME}?class=review&type=create&product_id={$product.id}&action=product" method="post">
                     <div>
                         <label for="inputName">名前</label>
                         <input type="text" name="name" class="form-control" id="inputName" placeholder="名前">
